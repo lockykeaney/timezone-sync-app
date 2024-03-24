@@ -28,8 +28,14 @@ export const env = createEnv({
       // VERCEL_URL doesn't include `https` so it cant be validated as a URL
       process.env.VERCEL ? z.string() : z.string().url(),
     ),
-    // DISCORD_CLIENT_ID: z.string(),
-    // DISCORD_CLIENT_SECRET: z.string(),
+    NEXT_FIREBASE_APIKEY: z.string(),
+    NEXT_FIREBASE_AUTHDOMAIN: z.string(),
+    NEXT_FIREBASE_PROJECTID: z.string(),
+    NEXT_FIREBASE_STORAGE_BUCKET: z.string(),
+    NEXT_FIREBASE_SENDERID: z.string(),
+    NEXT_FIREBASE_APPID: z.string(),
+    NEXT_GOOGLE_AUTH_CLIENT_ID: z.string(),
+    NEXT_GOOGLE_AUTH_CLIENT_SECRET: z.string(),
   },
 
   /**
@@ -50,8 +56,14 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
-    // DISCORD_CLIENT_ID: process.env.DISCORD_CLIENT_ID,
-    // DISCORD_CLIENT_SECRET: process.env.DISCORD_CLIENT_SECRET,
+    NEXT_FIREBASE_APIKEY: process.env.NEXT_FIREBASE_APIKEY,
+    NEXT_FIREBASE_AUTHDOMAIN: process.env.NEXT_FIREBASE_AUTHDOMAIN,
+    NEXT_FIREBASE_PROJECTID: process.env.NEXT_FIREBASE_PROJECTID,
+    NEXT_FIREBASE_STORAGE_BUCKET: process.env.NEXT_FIREBASE_STORAGE_BUCKET,
+    NEXT_FIREBASE_SENDERID: process.env.NEXT_FIREBASE_SENDERID,
+    NEXT_FIREBASE_APPID: process.env.NEXT_FIREBASE_APPID,
+    NEXT_GOOGLE_AUTH_CLIENT_ID: process.env.NEXT_GOOGLE_AUTH_CLIENT_ID,
+    NEXT_GOOGLE_AUTH_CLIENT_SECRET: process.env.NEXT_GOOGLE_AUTH_CLIENT_SECRET,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
